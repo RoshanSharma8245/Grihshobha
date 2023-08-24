@@ -1,0 +1,188 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+   // id("kotlin-parcelize")
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.delhipress.grihshobha.gri"
+        minSdk 21
+        //noinspection OldTargetApi
+        targetSdk 33
+        versionCode 58
+        versionName "4.5.6"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation":"$projectDir/schemas".toString(),
+                        "room.incremental":"true",
+                        "room.expandProjection":"true"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src/main/res', 'src/main/res/animator'
+            }
+        }
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation 'androidx.test:core-ktx:1.5.0'
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+            because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+            because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+        }
+    }
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    //https://maven.google.com/web/index.html#com.google.android.play:integrity:1.0.1
+//    implementation 'com.google.android.play:integrity:1.0.1'
+
+    // in-app update
+
+    implementation("com.google.android.play:app-update:2.0.0")
+    implementation("com.google.android.play:app-update-ktx:2.0.0")
+    //implementation 'com.google.android.play:core:1.10.3'
+
+    // multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Jsop
+    implementation 'org.jsoup:jsoup:1.13.1'
+
+    // Razorpay payment
+    implementation 'com.razorpay:checkout:1.6.21'
+
+//    implementation 'com.mikhaellopez:circularimageview:3.0.2'
+
+
+    // okhttp3
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.9'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    //implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:4.13.2"
+
+//    // ExoPlayer
+//    implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
+//
+//    implementation 'com.google.android.exoplayer:exoplayer-core:2.17.1'
+//    implementation 'com.google.android.exoplayer:exoplayer-dash:2.17.1'
+//    implementation 'com.google.android.exoplayer:exoplayer-ui:2.17.1'
+//    implementation 'com.google.android.exoplayer:exoplayer-hls:2.17.1'
+//    implementation 'com.google.android.exoplayer:extension-ima:2.17.1'
+    //Room
+
+
+    def roomVersion = "2.4.1"
+
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    implementation("androidx.room:room-rxjava2:$roomVersion")
+    implementation("androidx.room:room-rxjava3:$roomVersion")
+    implementation("androidx.room:room-guava:$roomVersion")
+    testImplementation("androidx.room:room-testing:$roomVersion")
+    implementation("androidx.room:room-paging:2.4.1")
+
+    //Lifecycle
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    def lifecycle_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+//  //Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+
+    // Browser
+    implementation 'androidx.browser:browser:1.5.0'
+
+//    implementation 'com.kaopiz:kprogresshud:1.2.0'
+
+    // Rx java
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+
+
+    implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:30.4.1')
+    // Add the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-inappmessaging-display'
+
+
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+
+}

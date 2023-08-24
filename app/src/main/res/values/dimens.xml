@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_250sdp">250dp</dimen>
+    <dimen name="home_card_title">14sp</dimen>
+    <dimen name="home_card_subhead">18sp</dimen>
+    <dimen name="home_card_subhead_large">18sp</dimen>
+    <dimen name="_80sdp">88dp</dimen>
+    <dimen name="_70sdp">70dp</dimen>
+    <dimen name="_static_menu_size">70dp</dimen>
+    <dimen name="_180sdp">180dp</dimen>
+    <dimen name="small_img_w">120dp</dimen>
+    <dimen name="small_img_h">80dp</dimen>
+    <dimen name="margin_left_subtitle">7dp</dimen>
+    <dimen name="margin_left_subtitle2">12dp</dimen>
+    <dimen name="seek_bar_thickness">4dp</dimen>
+    <dimen name="description_txt_size">18sp</dimen>
+    <dimen name="seek_bar_thumb_size">20dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

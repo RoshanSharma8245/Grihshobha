@@ -1,0 +1,93 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/slider_bg"
+    android:id="@+id/constraintLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/parent_home"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:id="@+id/root_layout"
+                android:background="@android:color/transparent"
+                android:layout_height="match_parent"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/nestedLayout"
+                android:background="@color/card_bg"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/subscribeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:text="Subscribe"
+                    android:textColor="@color/play_audio_bg"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/logoutTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:text="Logout"
+                    android:textColor="@color/play_audio_bg"
+                    android:textSize="15sp" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/storyRecyclerView"
+                    />
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+
+            />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/testFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

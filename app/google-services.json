@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "714534747298",
+    "project_id": "grihshobha-56371",
+    "storage_bucket": "grihshobha-56371.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714534747298:android:a7cdd95223a27a0315abfb",
+        "android_client_info": {
+          "package_name": "com.delhipress.grihshobha.gri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714534747298-i7l9djroogcvh4i3icdt3hd4gr9finb9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.delhipress.grihshobha.gri",
+            "certificate_hash": "742efd5a6200b95b5dc934b8aa6eecd091ba61fe"
+          }
+        },
+        {
+          "client_id": "714534747298-mgmfen2ua5dteq7h9unr3521v5k3m713.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.delhipress.grihshobha.gri",
+            "certificate_hash": "59a089c71a0b9faf3fdba5af2075c3c0cbd44b04"
+          }
+        },
+        {
+          "client_id": "714534747298-1d30t17dtvtut10613eq4kgb31rpbgsb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrUKkhuEeRSsXnFk-IMTPBumummcOt7DU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714534747298-1d30t17dtvtut10613eq4kgb31rpbgsb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
