@@ -89,7 +89,7 @@ class TestActivityConcent : AppCompatActivity(), OnConscentListener {
             this,
             binding.constraintLay,
             binding.testFrameLayout,
-            "text-155621",
+            "Client-Story-Id-1",
             this
         )
 

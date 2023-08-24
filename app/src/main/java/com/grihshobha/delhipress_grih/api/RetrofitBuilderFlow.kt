@@ -16,8 +16,8 @@ object RetrofitBuilderFlow {
 
     private val httpClient = OkHttpClient.Builder()
         .addInterceptor(AuthenticationInterceptor(
-            "PZR73EX-WJ7MFCQ-KXDYZ2A-5AHKYCS",
-            "J0XGGM6FZDM2DYNAJV03Z06SX2S7PZR73EXWJ7MFCQKXDYZ2A5AHKYCS"))
+            "J1EFAQR-H0N4921-QCXKVNH-6W9ZYY9",
+            "CFR472795Q42TTQJFV84M37A5G4SJ1EFAQRH0N4921QCXKVNH6W9ZYY9"))
 
     private fun getRetrofit(): Retrofit {
         logging.setLevel(HttpLoggingInterceptor.Level.HEADERS)
@@ -25,7 +25,7 @@ object RetrofitBuilderFlow {
         if (BuildConfig.DEBUG) httpClient.addInterceptor(logging)
 
         return Retrofit.Builder()
-            .baseUrl("https://sandbox-api.conscent.in/api/v1/")
+            .baseUrl("https://stage.tsbdev.co/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(httpClient.build())
             .build()

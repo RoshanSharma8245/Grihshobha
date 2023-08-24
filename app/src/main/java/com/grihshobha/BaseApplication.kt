@@ -18,10 +18,10 @@ class BaseApplication : MultiDexApplication(){
 
         ConscentWrapper.configure(
             application = this,
-            clientId = "6462098510fb035ffd1d91eb",
+            clientId = "6336e56f047afa7cb875739e",
             colorAccent = Color.parseColor("#DD2163"),
             appMode = ConscentConfiguration.APP_MODE.DEBUG,
-            apiMode = ConscentConfiguration.MODE.SANDBOX,
+            apiMode = ConscentConfiguration.MODE.STAGE,
         )
     }
 }
