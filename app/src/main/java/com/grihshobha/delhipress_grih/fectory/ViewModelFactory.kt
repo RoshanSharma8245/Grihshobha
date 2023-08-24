@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalCoroutinesApi::class)
-
 package com.grihshobha.delhipress_grih.fectory
 
 import androidx.lifecycle.ViewModel

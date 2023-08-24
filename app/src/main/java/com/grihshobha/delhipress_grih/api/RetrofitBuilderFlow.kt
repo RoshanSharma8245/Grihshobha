@@ -1,6 +1,5 @@
 package com.grihshobha.delhipress_grih.api
 
-import com.conscent.framework.core.ConscentConfiguration
 import com.grihshobha.delhipress_grih.BuildConfig
 import okhttp3.Credentials
 import okhttp3.Interceptor
